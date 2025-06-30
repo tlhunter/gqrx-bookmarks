@@ -1,13 +1,23 @@
 # Tag name          ;  color
+AmateurRadio        ; #fffb00
+Aviation            ; #c0c0c0
+Business            ; #c0c0c0
 CB                  ; #ff0000
-AmateurRadio        ; #00ff00
-Untagged            ; #c0c0c0
-FamilyRadio         ; #0000ff
+FMRadio             ; #ffb700
+GMRS_FRS            ; #0000ff
+Government          ; #c0c0c0
 MURS                ; #ffff00
-AMRadio             ; #ff00ff
-PublicService       ; #000000
+Marine              ; #00fff2
+Military            ; #c0c0c0
+NOAA                ; #60aaff
+Navigation          ; #c0c0c0
+PublicSafety        ; #ff4500
+Security            ; #c0c0c0
+TestRange           ; #c0c0c0
+Utility             ; #c0c0c0
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
+    24930000; 12m SSB Calling          ; USB                 ;       3000; AmateurRadio
     26965000; CB01                     ; AM                  ;      10000; CB
     26975000; CB02                     ; AM                  ;      10000; CB
     26985000; CB03                     ; AM                  ;      10000; CB
@@ -30,9 +40,9 @@ PublicService       ; #000000
     27205000; CB20                     ; AM                  ;      10000; CB
     27215000; CB21                     ; AM                  ;      10000; CB
     27225000; CB22                     ; AM                  ;      10000; CB
-    27255000; CB23                     ; AM                  ;      10000; CB
     27235000; CB24                     ; AM                  ;      10000; CB
     27245000; CB25                     ; AM                  ;      10000; CB
+    27255000; CB23                     ; AM                  ;      10000; CB
     27265000; CB26                     ; AM                  ;      10000; CB
     27275000; CB27                     ; AM                  ;      10000; CB
     27285000; CB28                     ; AM                  ;      10000; CB
@@ -48,6 +58,14 @@ PublicService       ; #000000
     27385000; CB38                     ; AM                  ;      10000; CB
     27395000; CB39                     ; AM                  ;      10000; CB
     27405000; CB40                     ; AM                  ;      10000; CB
+    28300000; 10m SSB Calling          ; USB                 ;       3000; AmateurRadio
+    29600000; 10m FM Simplex           ; FM                  ;      10000; AmateurRadio
+    33900000; Statewide fire / rescue  ; FM                  ;      12500; PublicSafety
+    40500000; Army Search and Rescue   ; FM                  ;      12500; Military,PublicSafety
+    41500000; Army Control Towers      ; FM                  ;      12500; Military
+    50125000; 6m CW Calling            ; CW                  ;        500; AmateurRadio
+    52525000; 6m FM Simplex            ; FM                  ;      10000; AmateurRadio
+    69400000; Mobile SAM sites         ; FM                  ;      12500; Military
     87900000; 87.9 FM                  ; WFM (stereo)        ;     200000; FMRadio
     88100000; 88.1 FM                  ; WFM (stereo)        ;     200000; FMRadio
     88300000; 88.3 FM                  ; WFM (stereo)        ;     200000; FMRadio
@@ -148,33 +166,900 @@ PublicService       ; #000000
    107300000; 107.3 FM                 ; WFM (stereo)        ;     200000; FMRadio
    107500000; 107.5 FM                 ; WFM (stereo)        ;     200000; FMRadio
    107700000; 107.7 FM                 ; WFM (stereo)        ;     200000; FMRadio
-   145290000; Amateur Radio Repeator   ; Narrow FM           ;      10000; AmateurRadio
-   145330000; Chat                     ; Narrow FM           ;      10000; AmateurRadio
-   162400000; SF Weather KHB49         ; WFM (mono)          ;      30000; PublicService
-   462562500; FRS01                    ; Narrow FM           ;       5000; FamilyRadio
-   462587500; FRS02                    ; Narrow FM           ;       5000; FamilyRadio
-   462612500; FRS03                    ; Narrow FM           ;       5000; FamilyRadio
-   462637500; FRS04                    ; Narrow FM           ;       5000; FamilyRadio
-   462662500; FRS05                    ; Narrow FM           ;       5000; FamilyRadio
-   462687500; FRS06                    ; Narrow FM           ;       5000; FamilyRadio
-   462712500; FRS07                    ; Narrow FM           ;       5000; FamilyRadio
-   467562500; FRS08                    ; Narrow FM           ;       5000; FamilyRadio
-   467587500; FRS09                    ; Narrow FM           ;       5000; FamilyRadio
-   467612500; FRS10                    ; Narrow FM           ;       5000; FamilyRadio
-   467637500; FRS11                    ; Narrow FM           ;       5000; FamilyRadio
-   467662500; FRS12                    ; Narrow FM           ;       5000; FamilyRadio
-   467687500; FRS13                    ; Narrow FM           ;       5000; FamilyRadio
-   467712500; FRS14                    ; Narrow FM           ;       5000; FamilyRadio
-   462550000; FRS15                    ; Narrow FM           ;       5000; FamilyRadio
-   462575000; FRS16                    ; Narrow FM           ;       5000; FamilyRadio
-   462600000; FRS17                    ; Narrow FM           ;       5000; FamilyRadio
-   462625000; FRS18                    ; Narrow FM           ;       5000; FamilyRadio
-   462650000; FRS19                    ; Narrow FM           ;       5000; FamilyRadio
-   462675000; FRS20                    ; Narrow FM           ;       5000; FamilyRadio
-   462700000; FRS21                    ; Narrow FM           ;       5000; FamilyRadio
-   462725000; FRS22                    ; Narrow FM           ;       5000; FamilyRadio
+   108200000; North Las Vegas VOT      ; AM                  ;       8000; Navigation
+   108300000; TTR ILS 14 Localizer     ; AM                  ;       8000; Navigation
+   110300000; KLAS Runway 25R ILS      ; AM                  ;       8000; Navigation
+   111700000; TTR ILS 32 Localizer     ; AM                  ;       8000; Navigation
+   111750000; KLAS Runway 25L LOC/GS   ; AM                  ;       8000; Navigation
+   113000000; TTR VOR                  ; AM                  ;       8000; Navigation
+   114300000; Mormon Mesa VOR          ; AM                  ;       8000; Navigation
+   114500000; Palmdale VOR             ; AM                  ;       8000; Navigation
+   114700000; Beatty VOR               ; AM                  ;       8000; Navigation
+   116000000; Tonopah VOR              ; AM                  ;       8000; Navigation
+   116300000; Wilson Creek VOR         ; AM                  ;       8000; Navigation
+   116400000; Edwards AFB VOR          ; AM                  ;       8000; Navigation
+   116700000; Boulder City VOR         ; AM                  ;       8000; Navigation
+   116900000; KLAS VOR                 ; AM                  ;       8000; Navigation
+   117500000; Groom Lake VOR           ; AM                  ;       8000; Navigation
+   117700000; Coaldale VOR             ; AM                  ;       8000; Navigation
+   118000000; KLAS Clearance Delivery  ; AM                  ;       8000; Aviation
+   118025000; LA Center high           ; AM                  ;       8000; Aviation
+   118050000; North Las Vegas ATIS     ; AM                  ;       8000; Aviation
+   118100000; Air drops                ; AM                  ;       8000; Military
+   118125000; Nellis AFB Approach      ; AM                  ;       8000; Aviation,Military
+   118275000; TTR Range 74 weather     ; AM                  ;       8000; Military
+   118300000; Creech AFB Tower         ; AM                  ;       8000; Aviation,Military
+   118400000; KLAS Approach SE         ; AM                  ;       8000; Aviation
+   118450000; Air Exercise targeting   ; AM                  ;       8000; Military
+   118700000; KLAS Janet Ops           ; AM                  ;       8000; Aviation,Government
+   118750000; KLAS Control Tower       ; AM                  ;       8000; Aviation
+   119000000; Grand Canyon Tower       ; AM                  ;       8000; Aviation
+   119150000; North Las Vegas Tower    ; AM                  ;       8000; Aviation
+   119350000; Nellis Control West      ; AM                  ;       8000; Aviation,Military
+   119400000; KLAS Final Approach      ; AM                  ;       8000; Aviation
+   119450000; TTR Base Ops             ; AM                  ;       8000; Military
+   119775000; KLAS Approach East       ; AM                  ;       8000; Aviation
+   119900000; KLAS Control Tower       ; AM                  ;       8000; Aviation
+   120250000; Joshua Control           ; AM                  ;       8000; Aviation,Military
+   120275000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   120450000; KLAS Approach NE         ; AM                  ;       8000; Aviation
+   120525000; NTTR Fire Fighters       ; AM                  ;       8000; Military,PublicSafety
+   120650000; Local Traffic            ; AM                  ;       8000; Aviation
+   120775000; KHND ATIS                ; AM                  ;       8000; Aviation
+   120900000; Nellis Clearance Delivery; AM                  ;       8000; Aviation,Military
+   121100000; KLAS Ground Control      ; AM                  ;       8000; Aviation
+   121125000; Creech AFB Weather       ; AM                  ;       8000; Aviation,Military
+   121250000; Oakland Center           ; AM                  ;       8000; Aviation
+   121500000; Aircraft Emergency       ; AM                  ;       8000; Aviation,PublicSafety
+   121700000; North Las Vegas Ground   ; AM                  ;       8000; Aviation
+   121800000; Nellis AFB Ground        ; AM                  ;       8000; Aviation,Military
+   121900000; KLAS Ground Control      ; AM                  ;       8000; Aviation
+   121950000; Local Traffic            ; AM                  ;       8000; Aviation
+   122000000; Flight Advisory Service  ; AM                  ;       8000; Aviation
+   122100000; Flight Service Stations  ; AM                  ;       8000; Aviation
+   122200000; Flight Service Ely       ; AM                  ;       8000; Aviation
+   122400000; Flight Service Las Vegas ; AM                  ;       8000; Aviation
+   122500000; Flight Service Tonopah   ; AM                  ;       8000; Aviation
+   122600000; Flight Service Mt. Potosi; AM                  ;       8000; Aviation
+   122700000; Boulder City UNICOM      ; AM                  ;       8000; Aviation
+   122800000; Desert Rock UNICOM       ; AM                  ;       8000; Aviation,Military
+   122825000; UNICOM Domestic          ; AM                  ;       8000; Aviation
+   122900000; MULTICOM                 ; AM                  ;       8000; Aviation
+   122950000; KLAS/KHND UNICOM         ; AM                  ;       8000; Aviation
+   123000000; Tonopah Airport UNICOM   ; AM                  ;       8000; Aviation
+   123225000; Dreamland Airspace       ; AM                  ;       8000; Military
+   123425000; Flight Test Enroute      ; AM                  ;       8000; Military,TestRange
+   123450000; Flight test air-air      ; AM                  ;       8000; Military
+   123475000; Nellis 64 AGRS           ; AM                  ;       8000; Military
+   123500000; Aviation Support         ; AM                  ;       8000; Aviation
+   123550000; Nellis Range Controller  ; AM                  ;       8000; Military
+   123800000; Oakland Center           ; AM                  ;       8000; Aviation
+   123825000; KLAS Helicopter Control  ; AM                  ;       8000; Aviation
+   123950000; Joshua Control Saline MOA; AM                  ;       8000; Aviation,Military
+   124000000; North Las Vegas Clearance; AM                  ;       8000; Aviation
+   124200000; LA Center NE             ; AM                  ;       8000; Aviation
+   124400000; KLAS Ramp Control        ; AM                  ;       8000; Aviation
+   124550000; Joshua Control Palmdale  ; AM                  ;       8000; Aviation,Military
+   124625000; LA Center NW             ; AM                  ;       8000; Aviation
+   124750000; Silverbow Tower          ; AM                  ;       8000; Military
+   124850000; LA Center                ; AM                  ;       8000; Aviation
+   124950000; Nellis Approach East     ; AM                  ;       8000; Aviation,Military
+   125025000; KLAS Approach West       ; AM                  ;       8000; Aviation
+   125100000; KHND Tower & CTAF        ; AM                  ;       8000; Aviation
+   125475000; KLAS Class B South       ; AM                  ;       8000; Aviation
+   125575000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   125600000; KLAS Approach SE & E     ; AM                  ;       8000; Aviation
+   125700000; North Las Vegas Tower    ; AM                  ;       8000; Aviation
+   125725000; LA Center high           ; AM                  ;       8000; Aviation
+   125750000; Oakland Center           ; AM                  ;       8000; Aviation
+   125900000; KLAS Departure SW        ; AM                  ;       8000; Aviation
+   126100000; Joshua Control Palmdale  ; AM                  ;       8000; Aviation,Military
+   126150000; Dreamland MOA Control    ; AM                  ;       8000; Military
+   126200000; 26 WPS Flight Advisory   ; AM                  ;       8000; Military
+   126300000; Mercury Approach         ; AM                  ;       8000; Military
+   126550000; Joshua Control Owens MOA ; AM                  ;       8000; Aviation,Military
+   126600000; Dreamland Airspace       ; AM                  ;       8000; Military
+   126650000; Nellis Control East      ; AM                  ;       8000; Aviation,Military
+   126950000; Nellis Track             ; AM                  ;       8000; Aviation,Military
+   127175000; Oakland Center           ; AM                  ;       8000; Aviation
+   127250000; TTR Ground Control       ; AM                  ;       8000; Military
+   127350000; LA Center                ; AM                  ;       8000; Aviation
+   127500000; Joshua Control ATCAA     ; AM                  ;       8000; Aviation,Military
+   127800000; KHND Ground              ; AM                  ;       8000; Aviation
+   127900000; KLAS Ramp Control        ; AM                  ;       8000; Aviation
+   127925000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   128075000; LA Center                ; AM                  ;       8000; Aviation
+   128550000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   128725000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   128800000; Oakland Center           ; AM                  ;       8000; Aviation
+   129025000; Private airline          ; AM                  ;       8000; Aviation
+   129100000; Saint George Airport FBO ; AM                  ;       8000; Aviation
+   129650000; Private airline          ; AM                  ;       8000; Aviation
+   130000000; KLAS Ramp alternate      ; AM                  ;       8000; Aviation
+   130350000; Northwest Airlines OPS   ; AM                  ;       8000; Aviation
+   130525000; Red Flag Red Team        ; AM                  ;       8000; Military
+   130650000; Air Mobility Command     ; AM                  ;       8000; Military
+   130700000; Northwest Airlines       ; AM                  ;       8000; Aviation
+   131150000; Delta Airlines           ; AM                  ;       8000; Aviation
+   131600000; Scenic Airlines          ; AM                  ;       8000; Aviation
+   131775000; America West Airlines    ; AM                  ;       8000; Aviation
+   132050000; Oakland Center           ; AM                  ;       8000; Aviation
+   132250000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   132400000; KLAS ATIS                ; AM                  ;       8000; Aviation
+   132550000; Nellis AFB Tower         ; AM                  ;       8000; Aviation,Military
+   132625000; LA Center                ; AM                  ;       8000; Aviation
+   132800000; Oakland Center           ; AM                  ;       8000; Aviation
+   132950000; Oakland Center           ; AM                  ;       8000; Aviation
+   133450000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   133550000; LA Center                ; AM                  ;       8000; Aviation
+   133600000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   133650000; Joshua Control Primary   ; AM                  ;       8000; Aviation,Military
+   133900000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   133950000; KLAS Departure NE        ; AM                  ;       8000; Aviation
+   134050000; Joshua Control Isabella  ; AM                  ;       8000; Aviation,Military
+   134075000; Private aircraft         ; AM                  ;       8000; Aviation
+   134100000; Clover Control South     ; AM                  ;       8000; Aviation,Military
+   134375000; Oakland Center           ; AM                  ;       8000; Aviation
+   134450000; Oakland Center           ; AM                  ;       8000; Aviation
+   134525000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   134650000; LA Center                ; AM                  ;       8000; Aviation
+   135000000; KLAS Final Approach      ; AM                  ;       8000; Aviation
+   135100000; Nellis Approach West     ; AM                  ;       8000; Aviation,Military
+   135250000; LA Center                ; AM                  ;       8000; Aviation
+   135350000; KHND Clearance Delivery  ; AM                  ;       8000; Aviation
+   135550000; LA Center ultra high     ; AM                  ;       8000; Aviation
+   135775000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   135850000; FAA nav aid test         ; AM                  ;       8000; Government
+   136500000; Private airline          ; AM                  ;       8000; Aviation
+   138012500; 422 TES                  ; AM                  ;       8000; Military
+   138100000; Green Flag Ops           ; AM                  ;       8000; Military
+   138125000; Data Carrier             ; AM                  ;       8000; Utility
+   138150000; Desert Rock Airstrip     ; AM                  ;       8000; Military
+   138175000; 16 WPS                   ; AM                  ;       8000; Military
+   138225000; FEMA base                ; AM                  ;       8000; Government,PublicSafety
+   138250000; 16 WPS                   ; AM                  ;       8000; Military
+   138300000; Search and Rescue        ; AM                  ;       8000; Military,PublicSafety
+   138350000; Dreamland Mission Backup ; AM                  ;       8000; Military
+   138375000; 66 WPS                   ; AM                  ;       8000; Military
+   138500000; MAFEX Check-In           ; AM                  ;       8000; Military
+   138575000; FAA nav aid test         ; AM                  ;       8000; Government
+   138600000; Air Exercise crypto      ; AM                  ;       8000; Military
+   138675000; Red Flag Ops             ; AM                  ;       8000; Military
+   138750000; Red Flag ORANGE 2        ; AM                  ;       8000; Military
+   138775000; Red Flag YELLOW 2        ; AM                  ;       8000; Military
+   138900000; Bird Dog                 ; AM                  ;       8000; Military
+   138950000; 26 WPS MQ-9              ; AM                  ;       8000; Military
+   139125000; 16 WPS                   ; AM                  ;       8000; Military
+   139200000; Red team air-air         ; AM                  ;       8000; Military
+   139300000; Nellis Pilot-Dispatcher  ; AM                  ;       8000; Aviation,Military
+   139400000; 66 WPS A-10              ; AM                  ;       8000; Military
+   139425000; Groom Mission            ; AM                  ;       8000; Military
+   139550000; 16 WPS                   ; AM                  ;       8000; Military
+   139575000; Green Flag               ; AM                  ;       8000; Military
+   139600000; 422 TES                  ; AM                  ;       8000; Military
+   139750000; 64 AGRS                  ; AM                  ;       8000; Military
+   139800000; Thunderbirds Air Show    ; AM                  ;       8000; Military
+   139850000; 64 AGRS                  ; AM                  ;       8000; Military
+   139950000; Green Flag               ; AM                  ;       8000; Military
+   140100000; Green Flag               ; AM                  ;       8000; Military
+   140150000; 16 WPS air-air           ; AM                  ;       8000; Military
+   140175000; 433 WPS Support          ; AM                  ;       8000; Military
+   140225000; Green Flag               ; AM                  ;       8000; Military
+   140275000; 66 WPS                   ; AM                  ;       8000; Military
+   140325000; 17 WPS Support           ; AM                  ;       8000; Military
+   140375000; Red Flag 66 RQS          ; AM                  ;       8000; Military
+   140400000; 433 WPS Support          ; AM                  ;       8000; Military
+   140450000; 422 TES Support          ; AM                  ;       8000; Military
+   140575000; Red Flag DGAR            ; AM                  ;       8000; Military
+   140625000; Air Exercise Raptor      ; AM                  ;       8000; Military
+   140700000; 433 WPS Support          ; AM                  ;       8000; Military
+   140800000; Red Flag DGAR            ; AM                  ;       8000; Military
+   140825000; 422 TES                  ; AM                  ;       8000; Military
+   140925000; Red Flag DGAR            ; AM                  ;       8000; Military
+   140950000; 422 TES                  ; AM                  ;       8000; Military
+   140975000; 66 WPS Support           ; AM                  ;       8000; Military
+   141000000; Red Flag SEAD            ; AM                  ;       8000; Military
+   141025000; 422 TES                  ; AM                  ;       8000; Military
+   141050000; Green Flag               ; AM                  ;       8000; Military
+   141075000; Red Flag DGAR            ; AM                  ;       8000; Military
+   141150000; Red Flag ORANGE 4        ; AM                  ;       8000; Military
+   141175000; Thunderbirds secondary   ; AM                  ;       8000; Military
+   141375000; Red Flag DGAR            ; AM                  ;       8000; Military
+   141400000; Green Flag               ; AM                  ;       8000; Military
+   141475000; Red Flag DGAR            ; AM                  ;       8000; Military
+   141500000; Red Flag air-air         ; AM                  ;       8000; Military
+   141575000; Red Flag DZ/LZ           ; AM                  ;       8000; Military
+   141600000; Weapons School           ; AM                  ;       8000; Military
+   141625000; 16 WPS                   ; AM                  ;       8000; Military
+   141650000; 422 TES Support          ; AM                  ;       8000; Military
+   141675000; 64 AGRS                  ; AM                  ;       8000; Military
+   141700000; R-4806 Control           ; AM                  ;       8000; Military
+   141775000; 34 WPS                   ; AM                  ;       8000; Military
+   141825000; Red Flag DGAR            ; AM                  ;       8000; Military
+   141925000; 422 TES Support          ; AM                  ;       8000; Military
+   141950000; 422 TES                  ; AM                  ;       8000; Military
+   142150000; USAF MARS input          ; FM                  ;      12500; Military
+   142250000; USAF MARS Simplex        ; FM                  ;      12500; Military
+   142275000; USAF MARS input          ; FM                  ;      12500; Military
+   142325000; Red Flag DGAR            ; AM                  ;       8000; Military
+   142525000; Red Flag CSAR Primary    ; AM                  ;       8000; Military
+   142550000; Red Flag 66 RQS          ; AM                  ;       8000; Military
+   142750000; SOF Bullseye Control     ; AM                  ;       8000; Military
+   143000000; SOF Bullseye Control     ; AM                  ;       8000; Military
+   143250000; 461st FLTS               ; AM                  ;       8000; Military
+   143375000; 66 WPS                   ; AM                  ;       8000; Military
+   143450000; USAF MARS output         ; FM                  ;      12500; Military
+   143525000; Red Flag Red Team        ; AM                  ;       8000; Military
+   143600000; 422 TES                  ; AM                  ;       8000; Military
+   143750000; Red Flag CAS ADMIN       ; AM                  ;       8000; Military
+   143775000; USAF MARS output         ; FM                  ;      12500; Military
+   143825000; 64 AGRS                  ; AM                  ;       8000; Military
+   144200000; 2m SSB Calling           ; USB                 ;       3000; AmateurRadio
+   146520000; 2m FM Simplex            ; FM                  ;      10000; AmateurRadio
+   148100000; Exercise controller      ; FM                  ;      12500; Military
+   148175000; Creech AFB SOF           ; AM                  ;       8000; Military
+   148200000; Exercise controller      ; FM                  ;      12500; Military
+   148250000; 66 RQS                   ; AM                  ;       8000; Military
+   148500000; Nellis Range Controller  ; FM                  ;      12500; Military
+   148600000; Weapons School           ; AM                  ;       8000; Military
+   148750000; Air Exercise Nellis WS   ; AM                  ;       8000; Military
+   148800000; Air Exercise Nellis WS   ; AM                  ;       8000; Military
+   148850000; 66 WPS Support           ; AM                  ;       8000; Military
+   148875000; Air Exercise Nellis WS   ; AM                  ;       8000; Military
+   149100000; Red Flag DGAR            ; AM                  ;       8000; Military
+   149125000; 422 TES                  ; AM                  ;       8000; Military
+   149325000; Dreamland Airspace       ; AM                  ;       8000; Military
+   149400000; Red Flag SAO/DGAR        ; AM                  ;       8000; Military
+   149525000; 64 AGRS                  ; AM                  ;       8000; Military
+   149650000; Red Flag KC-135          ; AM                  ;       8000; Military
+   149675000; Range 74 Air-Air         ; AM                  ;       8000; Military
+   149875000; 26 WPS MQ-9              ; AM                  ;       8000; Military
+   150175000; Nellis Range Controller  ; FM                  ;      12500; Military
+   150200000; Back Gate radar          ; FM                  ;      12500; Military
+   150500000; 422 TES                  ; AM                  ;       8000; Military
+   150675000; Red Flag 66 RQS          ; AM                  ;       8000; Military
+   150995000; Lincoln County Road Dept ; FM                  ;      12500; Utility
+   151040000; Highway Patrol           ; FM                  ;      12500; PublicSafety
+   151055000; Rural Cops/Fire Dispatch ; FM                  ;      12500; PublicSafety
+   151137500; National Interop 1       ; Narrow FM           ;      12500; PublicSafety
+   151160000; Wildlife Repeater        ; FM                  ;      12500; Government
+   151310000; NHP Alamo Repeater       ; FM                  ;      12500; PublicSafety
+   151340000; State Parks Repeater     ; FM                  ;      12500; Government
+   151355000; DOT Repeater             ; FM                  ;      12500; Utility
+   151475000; Wildlife Repeater        ; FM                  ;      12500; Government
    151820000; MURS 151.820 MHz         ; WFM (mono)          ;      11250; MURS
    151880000; MURS 151.880 MHz         ; WFM (mono)          ;      11250; MURS
    151940000; MURS 151.940 MHz         ; WFM (mono)          ;      11250; MURS
+   153845000; Firefighters/Paramedics  ; FM                  ;      12500; PublicSafety
+   153920000; Alamo Fire Protection    ; FM                  ;      12500; PublicSafety
+   153995000; Animal Control           ; FM                  ;      12500; PublicSafety
+   154010000; NHP Alamo input          ; FM                  ;      12500; PublicSafety
+   154055000; NHP Alamo output         ; FM                  ;      12500; PublicSafety
+   154070000; Lincoln County Sheriff   ; FM                  ;      12500; PublicSafety
+   154235000; Nye County Sheriff       ; FM                  ;      12500; PublicSafety
+   154265000; National EMS Tac         ; Narrow FM           ;      12500; PublicSafety
+   154280000; National Fire Tac        ; Narrow FM           ;      12500; PublicSafety
+   154452500; National Interop 2       ; Narrow FM           ;      12500; PublicSafety
    154570000; MURS 154.570 MHz         ; WFM (mono)          ;      20000; MURS
    154600000; MURS 154.600 MHz         ; WFM (mono)          ;      20000; MURS
+   154680000; NHP Alamo output         ; FM                  ;      12500; PublicSafety
+   154740000; NHP Alamo output         ; FM                  ;      12500; PublicSafety
+   154770000; Law Enforcement Mutual Aid; FM                  ;      12500; PublicSafety
+   154785000; NHP Tonopah              ; FM                  ;      12500; PublicSafety
+   154800000; Rural Cops Repeater      ; FM                  ;      12500; PublicSafety
+   154830000; Nye County Sheriff       ; FM                  ;      12500; PublicSafety
+   154860000; Lincoln County Sheriff   ; FM                  ;      12500; PublicSafety
+   154882500; NHP Warm Springs         ; FM                  ;      12500; PublicSafety
+   154905000; NHP Highland Peak        ; FM                  ;      12500; PublicSafety
+   154987500; NHP Tonopah              ; FM                  ;      12500; PublicSafety
+   154995000; Firefighters/Paramedics  ; FM                  ;      12500; PublicSafety
+   155010000; Nye County Sheriff       ; FM                  ;      12500; PublicSafety
+   155032500; NHP Warm Springs         ; FM                  ;      12500; PublicSafety
+   155130000; NHP Highland Peak        ; FM                  ;      12500; PublicSafety
+   155145000; NHP Alamo input          ; FM                  ;      12500; PublicSafety
+   155160000; Search and Rescue        ; FM                  ;      12500; PublicSafety
+   155205000; Lincoln County Sheriff   ; FM                  ;      12500; PublicSafety
+   155355000; NHP Alamo input          ; FM                  ;      12500; PublicSafety
+   155370000; National Law Tac 1       ; Narrow FM           ;      12500; PublicSafety
+   155430000; Nye County Sheriffs      ; FM                  ;      12500; PublicSafety
+   155475000; National Law Tac 2       ; Narrow FM           ;      12500; PublicSafety
+   155475000; Federal Law Enforcement  ; FM                  ;      12500; Government
+   155535000; Lincoln County Sheriff   ; FM                  ;      12500; PublicSafety
+   155625000; Rural Cops Dispatch      ; FM                  ;      12500; PublicSafety
+   155650000; Back Gate radar          ; FM                  ;      12500; Military
+   155655000; Law Enforcement Mutual Aid; FM                  ;      12500; PublicSafety
+   155685000; Park Rangers             ; FM                  ;      12500; PublicSafety
+   155700000; NHP Alamo output         ; FM                  ;      12500; PublicSafety
+   155745000; Alamo Fire input         ; FM                  ;      12500; PublicSafety
+   155790000; Nye County Sheriff       ; FM                  ;      12500; PublicSafety
+   156000000; Channel 00 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156050000; Channel 01 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156100000; Channel 02 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156150000; Channel 03 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156200000; Channel 04 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156250000; Channel 05 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156300000; Channel 06 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156350000; Channel 07 (Commercial)  ; Narrow FM           ;      12500; Marine
+   156400000; Channel 08 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156450000; Channel 09 (Boater Call) ; Narrow FM           ;      12500; Marine
+   156500000; Channel 10 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156550000; Channel 11 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156600000; Channel 12 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156650000; Channel 13 (Nav Safety)  ; Narrow FM           ;      12500; Marine
+   156700000; Channel 14 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156750000; Channel 15 (On-board)    ; Narrow FM           ;      12500; Marine
+   156800000; Channel 16 (Distress)    ; Narrow FM           ;      12500; Marine
+   156850000; Channel 17 (State Ctl)   ; Narrow FM           ;      12500; Marine
+   156900000; Channel 18 (Commercial)  ; Narrow FM           ;      12500; Marine
+   156950000; Channel 19 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157000000; Channel 20 (Repeater)    ; Narrow FM           ;      12500; Marine
+   157050000; Channel 21 (USCG)        ; Narrow FM           ;      12500; Marine
+   157100000; Channel 22 (USCG)        ; Narrow FM           ;      12500; Marine
+   157150000; Channel 23 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157200000; Channel 24 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157250000; Channel 25 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157300000; Channel 26 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157350000; Channel 27 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157400000; Channel 28 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157450000; Channel 63 (USCG)        ; Narrow FM           ;      12500; Marine
+   157500000; Channel 65 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157550000; Channel 66 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157600000; Channel 67 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157650000; Channel 68 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157700000; Channel 69 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157750000; Channel 70 (DSC)         ; Demod Off           ;      12500; Marine
+   157800000; Channel 71 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157850000; Channel 72 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157900000; Channel 73 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157950000; Channel 74 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158000000; Channel 75 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158050000; Channel 76 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158100000; Channel 77 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158150000; Channel 78 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158200000; Channel 79 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158250000; Channel 80 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158300000; Channel 81 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158350000; Channel 82 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158400000; Channel 83 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158450000; Channel 84 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158500000; Channel 85 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158550000; Channel 86 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158600000; Channel 87 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158650000; Channel 88 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158737500; National Interop 3       ; Narrow FM           ;      12500; PublicSafety
+   158745000; Cops Northeast Patrol    ; FM                  ;      12500; PublicSafety
+   158790000; Cops Administration      ; FM                  ;      12500; PublicSafety
+   158820000; NHP Warm Springs input   ; FM                  ;      12500; PublicSafety
+   158835000; NHP Alamo/Highland input ; FM                  ;      12500; PublicSafety
+   158850000; LVPD Glendale Repeater   ; FM                  ;      12500; PublicSafety
+   158925000; NHP Warm Springs input   ; FM                  ;      12500; PublicSafety
+   158940000; NHP Highland Peak input  ; FM                  ;      12500; PublicSafety
+   158970000; NHP Alamo input          ; FM                  ;      12500; PublicSafety
+   158985000; Road Department          ; FM                  ;      12500; Utility
+   159030000; NHP Alamo input          ; FM                  ;      12500; PublicSafety
+   159150000; NHP Alamo output         ; FM                  ;      12500; PublicSafety
+   159420000; NHP Alamo/Warm Springs   ; FM                  ;      12500; PublicSafety
+   159472500; National Interop 4       ; Narrow FM           ;      12500; PublicSafety
+   162400000; NOAA Weather 1           ; WFM (mono)          ;      30000; NOAA
+   162425000; NOAA Weather 2           ; WFM (mono)          ;      30000; NOAA
+   162450000; NOAA Weather 3           ; WFM (mono)          ;      30000; NOAA
+   162475000; NOAA Weather 4           ; WFM (mono)          ;      30000; NOAA
+   162475000; NOAA Weather Utah        ; WFM (mono)          ;      30000; NOAA
+   162500000; NOAA Weather 5           ; WFM (mono)          ;      30000; NOAA
+   162525000; NOAA Weather 6           ; WFM (mono)          ;      30000; NOAA
+   162550000; NOAA Weather 7           ; WFM (mono)          ;      30000; NOAA
+   162550000; NOAA Weather Las Vegas   ; WFM (mono)          ;      30000; NOAA
+   163800000; USGS Seismic Sensor      ; FM                  ;      12500; Utility
+   165900000; Back Gate radar          ; FM                  ;      12500; Military
+   166375000; Fire Dispatch            ; FM                  ;      12500; PublicSafety
+   168437500; NTS Operations           ; FM                  ;      12500; Government
+   170025000; Fire Weather             ; FM                  ;      12500; PublicSafety
+   170525000; NTTR Fire Fighters       ; FM                  ;      12500; PublicSafety
+   171220000; Seismic Sensor           ; FM                  ;      12500; Utility
+   171725000; Tonopah Base Station     ; FM                  ;      12500; Government
+   180400000; Back Gate radar          ; FM                  ;      12500; Military
+   216725000; Nellis Air Show Narration; FM                  ;      12500; Military
+   216975000; Nellis Air Show Cockpit  ; FM                  ;      12500; Military
+   222100000; 1.25m SSB Calling        ; USB                 ;       3000; AmateurRadio
+   223500000; 1.25m FM Simplex         ; FM                  ;      10000; AmateurRadio
+   225300000; VX-9 air-air             ; AM                  ;       8000; Military
+   225325000; Red Flag AMC             ; AM                  ;       8000; Military
+   225350000; Red Flag AWACS           ; AM                  ;       8000; Military
+   225450000; Range 65 Operations      ; AM                  ;       8000; Military
+   225550000; Range 74 Operations      ; AM                  ;       8000; Military
+   225575000; AWACS Check-in           ; AM                  ;       8000; Military
+   225800000; Dreamland AAR Boom       ; AM                  ;       8000; Military
+   226100000; Creech AFB SOF           ; AM                  ;       8000; Military
+   226225000; Air Exercise             ; AM                  ;       8000; Military
+   226450000; Red Flag air-air         ; AM                  ;       8000; Military
+   226875000; Red Flag air-air         ; AM                  ;       8000; Military
+   227050000; Red Flag AWACS           ; AM                  ;       8000; Military
+   228000000; Range 74 Operations      ; AM                  ;       8000; Military
+   228200000; Red Flag BEIGE 24        ; AM                  ;       8000; Military
+   228275000; Red Flag Ops             ; AM                  ;       8000; Military
+   228450000; Nellis Tanker Ops        ; AM                  ;       8000; Military
+   228500000; Aerial Refueling         ; AM                  ;       8000; Military
+   228800000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   228950000; Dreamland AAR Control    ; AM                  ;       8000; Military
+   229000000; Nellis 16 WPS Ops        ; AM                  ;       8000; Military
+   229250000; Red Flag FAC east        ; AM                  ;       8000; Military
+   229700000; Red Flag air-air         ; AM                  ;       8000; Military
+   230025000; 26 WPS MQ-9              ; AM                  ;       8000; Military
+   231100000; Red Flag JICO            ; AM                  ;       8000; Military
+   231750000; Red Flag air-air         ; AM                  ;       8000; Military
+   233450000; Red Flag AWACS Secondary ; AM                  ;       8000; Military
+   233525000; Flight Test Support      ; AM                  ;       8000; Military
+   233600000; 34 WPS                   ; AM                  ;       8000; Military
+   233950000; TTR Base Ops             ; AM                  ;       8000; Military
+   234250000; Range 62 Operations      ; AM                  ;       8000; Military
+   234325000; Coyote MOA Control       ; AM                  ;       8000; Military
+   234800000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   234900000; Nellis Squadron Common   ; AM                  ;       8000; Military
+   234975000; Red Flag air-air         ; AM                  ;       8000; Military
+   235200000; Weapons School AAR       ; AM                  ;       8000; Military
+   235250000; Thunderbirds Air Show    ; AM                  ;       8000; Military
+   235400000; NASA air-ground          ; AM                  ;       8000; Government
+   235750000; Creech AFB SOF           ; AM                  ;       8000; Military
+   235950000; Red Flag air-air         ; AM                  ;       8000; Military
+   236000000; Red Flag 66 RQS Ops      ; AM                  ;       8000; Military
+   236100000; 422 TES Ops              ; AM                  ;       8000; Military
+   236500000; Dreamland Mission        ; AM                  ;       8000; Military
+   236600000; VX-9 Exercise            ; AM                  ;       8000; Military
+   236850000; Slow movers air-air      ; AM                  ;       8000; Aviation
+   236950000; Darkstar controller      ; AM                  ;       8000; Military
+   237050000; Red Flag AWACS           ; AM                  ;       8000; Military
+   237125000; Red Flag air-air         ; AM                  ;       8000; Military
+   237300000; Red Flag Ops             ; AM                  ;       8000; Military
+   237600000; Red Flag AWACS/Ops       ; AM                  ;       8000; Military
+   237625000; Air Exercise Air-Air     ; AM                  ;       8000; Military
+   238325000; Air Exercise Ops         ; AM                  ;       8000; Military
+   238650000; Red Flag FAC east        ; AM                  ;       8000; Military
+   238675000; Red Flag Blue Air Ops    ; AM                  ;       8000; Military
+   238700000; Exercise air-air         ; AM                  ;       8000; Military
+   238800000; Alamo MOA Control        ; AM                  ;       8000; Military
+   238950000; Dreamland Mission        ; AM                  ;       8000; Military
+   239375000; Red Flag Red Team AWACS  ; AM                  ;       8000; Military
+   239400000; Red Flag Ops             ; AM                  ;       8000; Military
+   239600000; Red Flag air-air         ; AM                  ;       8000; Military
+   239700000; 34 WPS                   ; AM                  ;       8000; Military
+   239800000; PMSV Metro Weather       ; AM                  ;       8000; Aviation
+   239850000; Dreamland Mission        ; AM                  ;       8000; Military
+   239875000; Red Flag Red Team        ; AM                  ;       8000; Military
+   240100000; Dreamland AAR Boom       ; AM                  ;       8000; Military
+   240175000; Red Flag Blue Team       ; AM                  ;       8000; Military
+   240300000; Aggressor secondary      ; AM                  ;       8000; Military
+   241000000; Army National Guard      ; AM                  ;       8000; Military
+   242200000; Air Combat Command       ; AM                  ;       8000; Military
+   243000000; Military Aircraft Emergency; AM                  ;       8000; Military,PublicSafety
+   243300000; Range 64 air-air         ; AM                  ;       8000; Military
+   244300000; Red Flag air-air         ; AM                  ;       8000; Military
+   245150000; Red Flag air-air         ; AM                  ;       8000; Military
+   245650000; Red Flag 66 RQS          ; AM                  ;       8000; Military
+   246900000; Nationwide air-air       ; AM                  ;       8000; Aviation
+   248600000; Red Flag air-air         ; AM                  ;       8000; Military
+   249775000; Air Exercise R-2508      ; AM                  ;       8000; Military
+   249800000; 422 TES                  ; AM                  ;       8000; Military
+   250575000; 422 TES                  ; AM                  ;       8000; Military
+   250850000; 422 TES Air-Air          ; AM                  ;       8000; Military
+   251200000; Green Flag Ops           ; AM                  ;       8000; Military
+   251350000; Edwards 411 FLTS         ; AM                  ;       8000; Military
+   251900000; Red Flag 66 RQS Ops      ; AM                  ;       8000; Military
+   252100000; 64 AGRS Ops              ; AM                  ;       8000; Military
+   252200000; Air Exercise             ; AM                  ;       8000; Military
+   252525000; Red Flag air-air         ; AM                  ;       8000; Military
+   252550000; Red Flag VAQ-134         ; AM                  ;       8000; Military
+   252800000; 66 RQS                   ; AM                  ;       8000; Military
+   253200000; 422 TES                  ; AM                  ;       8000; Military
+   253700000; Red Flag RED 3           ; AM                  ;       8000; Military
+   254300000; KLAS Ground Control      ; AM                  ;       8000; Aviation
+   254400000; Nellis Control West      ; AM                  ;       8000; Aviation,Military
+   254475000; Red Flag RED 4           ; AM                  ;       8000; Military
+   254900000; Area 51 Mission Control  ; AM                  ;       8000; Military
+   255125000; Military enroute air-air ; AM                  ;       8000; Military
+   255300000; 66 WPS                   ; AM                  ;       8000; Military
+   255400000; Nellis UNICOM            ; AM                  ;       8000; Aviation,Military
+   255500000; Dreamland Mission backup ; AM                  ;       8000; Military
+   255600000; Dreamland Mission backup ; AM                  ;       8000; Military
+   255700000; Red Flag AWACS Darkstar  ; AM                  ;       8000; Military
+   255725000; 422 TES                  ; AM                  ;       8000; Military
+   255800000; Dreamland Mission Prime  ; AM                  ;       8000; Military
+   255950000; Northern Ranges MOA      ; AM                  ;       8000; Military
+   256150000; Air Exercise air strike  ; AM                  ;       8000; Military
+   256250000; Air Exercise Air-Air     ; AM                  ;       8000; Military
+   256800000; Joshua Control Saline MOA; AM                  ;       8000; Aviation,Military
+   257000000; Dreamland AAR Prime      ; AM                  ;       8000; Military
+   257075000; Edwards 418 FLTS         ; AM                  ;       8000; Military
+   257100000; 17 WPS                   ; AM                  ;       8000; Military
+   257350000; AMC Command post         ; AM                  ;       8000; Military
+   257675000; LA Center                ; AM                  ;       8000; Aviation
+   257700000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   257800000; KLAS Control Tower       ; AM                  ;       8000; Aviation
+   257850000; Oakland Center           ; AM                  ;       8000; Aviation
+   257950000; Silverbow Tower          ; AM                  ;       8000; Military
+   258150000; Air Exercise air-air     ; AM                  ;       8000; Military
+   258200000; Enroute air-air          ; AM                  ;       8000; Aviation
+   258675000; 26 WPS MQ-9              ; AM                  ;       8000; Military
+   258900000; Black Flag               ; AM                  ;       8000; Military
+   259000000; Red Flag 66 RQS Ops      ; AM                  ;       8000; Military
+   259400000; Nellis Range Control     ; AM                  ;       8000; Military
+   259450000; Coyote MOA aux           ; AM                  ;       8000; Military
+   259800000; Red Flag VAQ-134         ; AM                  ;       8000; Military
+   259950000; AMC Command post         ; AM                  ;       8000; Military
+   260100000; 433 WPS                  ; AM                  ;       8000; Military
+   260250000; Red Flag Comms           ; AM                  ;       8000; Military
+   261100000; Dreamland MOA Control    ; AM                  ;       8000; Military
+   261375000; Red Flag VAQ-134         ; AM                  ;       8000; Military
+   262625000; Red Flag air-air         ; AM                  ;       8000; Military
+   262650000; 433 WPS                  ; AM                  ;       8000; Military
+   262700000; Air Exercise Control     ; AM                  ;       8000; Military
+   262750000; 64 AGRS                  ; AM                  ;       8000; Military
+   263600000; Desert Range Control     ; AM                  ;       8000; Military
+   264225000; F-117 dogfighting        ; AM                  ;       8000; Military
+   264850000; Weapons School           ; AM                  ;       8000; Military
+   265175000; 422 TES air-air          ; AM                  ;       8000; Military
+   265500000; Area 51 Airspace Control ; AM                  ;       8000; Military
+   265700000; Weapons School           ; AM                  ;       8000; Military
+   265975000; Red Flag VAQ-134         ; AM                  ;       8000; Military
+   266000000; Red Flag BLUE 4          ; AM                  ;       8000; Military
+   266100000; 422 TES air-air          ; AM                  ;       8000; Military
+   266600000; 433 WPS                  ; AM                  ;       8000; Military
+   267100000; Red Flag VAQ-134         ; AM                  ;       8000; Military
+   267150000; Red Flag VMFA-211        ; AM                  ;       8000; Military
+   267475000; Red Flag VMFA-211        ; AM                  ;       8000; Military
+   267525000; Red Flag Air Drop        ; AM                  ;       8000; Military
+   267600000; Red Flag AWACS Chalice   ; AM                  ;       8000; Military
+   268000000; Range 63/64 Operations   ; AM                  ;       8000; Military
+   268200000; Elgin MOA Control        ; AM                  ;       8000; Military
+   268300000; USMC air-air             ; AM                  ;       8000; Military
+   268500000; Air Exercise Ops         ; AM                  ;       8000; Military
+   268800000; RTO Showtime             ; AM                  ;       8000; Military
+   268950000; Weapons School drops     ; AM                  ;       8000; Military
+   269000000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   269175000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   269250000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   269275000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   269300000; Oakland Center           ; AM                  ;       8000; Aviation
+   269400000; Red Team tankers         ; AM                  ;       8000; Military
+   269850000; Red Flag 55FS            ; AM                  ;       8000; Military
+   270025000; Red Flag MiG Ops         ; AM                  ;       8000; Military
+   270100000; Nellis ATIS              ; AM                  ;       8000; Aviation,Military
+   270725000; Red Flag SEAD            ; AM                  ;       8000; Military
+   270800000; KLAS Ground Control      ; AM                  ;       8000; Aviation
+   271000000; Exercise air-air         ; AM                  ;       8000; Military
+   271550000; Air Exercise R-2508      ; AM                  ;       8000; Military
+   271600000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   272175000; Aerial Refueling         ; AM                  ;       8000; Military
+   273450000; Oakland Center           ; AM                  ;       8000; Aviation
+   273550000; Nellis Approach East     ; AM                  ;       8000; Aviation,Military
+   274875000; Range 63/64 Secondary    ; AM                  ;       8000; Military
+   275800000; Nellis Ground Control    ; AM                  ;       8000; Aviation,Military
+   275850000; Dreamland Mission Prime  ; AM                  ;       8000; Military
+   275900000; 422 TES air-air          ; AM                  ;       8000; Military
+   276050000; Red Flag Air-Ground      ; AM                  ;       8000; Military
+   276350000; Air Exercise Ops         ; AM                  ;       8000; Military
+   276400000; Aerial Refueling         ; AM                  ;       8000; Military
+   276850000; Red Flag RED 7           ; AM                  ;       8000; Military
+   277100000; Air Exercise Air-Air     ; AM                  ;       8000; Military
+   277500000; Red Flag VMFA-211        ; AM                  ;       8000; Military
+   277625000; Red Flag AWACS Darkstar  ; AM                  ;       8000; Military
+   277800000; 414th CTS Airboss        ; AM                  ;       8000; Military
+   278200000; Nellis Tactical          ; AM                  ;       8000; Military
+   278400000; 422 TES                  ; AM                  ;       8000; Military
+   278425000; Red Flag 393 BS          ; AM                  ;       8000; Military
+   278700000; Air Exercise Air-Air     ; AM                  ;       8000; Military
+   278975000; VX-9 mission             ; AM                  ;       8000; Military
+   279600000; LA Center                ; AM                  ;       8000; Aviation
+   280350000; Air Exercise air drop    ; AM                  ;       8000; Military
+   281025000; Elgin MOA Control        ; AM                  ;       8000; Military
+   281250000; 422 TES air-air          ; AM                  ;       8000; Military
+   281500000; Oakland Center           ; AM                  ;       8000; Aviation
+   281725000; Weapons School Air-Air   ; AM                  ;       8000; Military
+   281750000; Air Exercise AWACS       ; AM                  ;       8000; Military
+   282200000; KLAS Approach East       ; AM                  ;       8000; Aviation
+   282500000; Air Combat Command       ; AM                  ;       8000; Military
+   282600000; Air-ground Ops           ; AM                  ;       8000; Military
+   283000000; Squadron Command Post    ; AM                  ;       8000; Military
+   283750000; MAFEX Check-In           ; AM                  ;       8000; Military
+   283800000; 64 AGRS MiG Ops          ; AM                  ;       8000; Military
+   283925000; Red Flag VMFA-211        ; AM                  ;       8000; Military
+   284000000; Air Exercise White 6     ; AM                  ;       8000; Military
+   284225000; Red Flag VMFA-211        ; AM                  ;       8000; Military
+   284425000; Air strike practice      ; AM                  ;       8000; Military
+   284550000; 64 AGRS                  ; AM                  ;       8000; Military
+   284650000; Oakland Center           ; AM                  ;       8000; Aviation
+   285150000; Air Exercise targeting   ; AM                  ;       8000; Military
+   285325000; Red Flag 95FS            ; AM                  ;       8000; Military
+   285500000; Oakland Center           ; AM                  ;       8000; Aviation
+   285525000; Creech AFB SFA           ; AM                  ;       8000; Aviation,Military
+   285650000; Weapons School drops     ; AM                  ;       8000; Military
+   285750000; Enroute air-air          ; AM                  ;       8000; Aviation
+   287450000; Red Flag timing signal   ; AM                  ;       8000; Military
+   287600000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   288225000; Range 71-76 Secondary    ; AM                  ;       8000; Military
+   288550000; Red Flag British players ; AM                  ;       8000; Military
+   288600000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   288650000; Red Flag 95FS            ; AM                  ;       8000; Military
+   288800000; Range 64 Operations      ; AM                  ;       8000; Military
+   289175000; MAFEX Check-In           ; AM                  ;       8000; Military
+   289300000; Caliente MOA Control     ; AM                  ;       8000; Military
+   289400000; Nellis Clearance Delivery; AM                  ;       8000; Aviation,Military
+   289600000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   289700000; Aerial Refueling         ; AM                  ;       8000; Military
+   290300000; Joshua Control Palmdale  ; AM                  ;       8000; Aviation,Military
+   290600000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   290800000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   291600000; Joshua Control Panamint  ; AM                  ;       8000; Aviation,Military
+   291725000; Nellis Approach          ; AM                  ;       8000; Aviation,Military
+   291850000; Red Flag DCA             ; AM                  ;       8000; Military
+   291900000; Aerial Refueling         ; AM                  ;       8000; Military
+   291975000; Red Flag 95FS            ; AM                  ;       8000; Military
+   292000000; German Tornados          ; AM                  ;       8000; Military
+   292100000; 17 WPS                   ; AM                  ;       8000; Military
+   292200000; Range 61 Operations      ; AM                  ;       8000; Military
+   292450000; Red Flag 16 AACS         ; AM                  ;       8000; Military
+   292900000; Air Exercise air-ground  ; AM                  ;       8000; Military
+   293000000; AAR Elgin MOA            ; AM                  ;       8000; Military
+   293500000; Range 77 Operations      ; AM                  ;       8000; Military
+   293875000; 422 TES Air-Air          ; AM                  ;       8000; Military
+   293900000; Red Flag P-3C            ; AM                  ;       8000; Military
+   294725000; Red Flag HC-130J         ; AM                  ;       8000; Military
+   294775000; Red Flag 95FS            ; AM                  ;       8000; Military
+   294900000; Caliente MOA Secondary   ; AM                  ;       8000; Military
+   295400000; Aerial Refueling         ; AM                  ;       8000; Military
+   295800000; Aerial Refueling         ; AM                  ;       8000; Military
+   296100000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   296700000; Oakland Center Tactical  ; AM                  ;       8000; Aviation
+   296900000; Red Team AAR Boom        ; AM                  ;       8000; Military
+   297000000; Air Mobility Command     ; AM                  ;       8000; Military
+   297700000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   297750000; Dreamland Mission        ; AM                  ;       8000; Military
+   297900000; Laser guided weapons     ; AM                  ;       8000; Military
+   298200000; 422 TES Bolt             ; AM                  ;       8000; Military
+   298300000; AAR                      ; AM                  ;       8000; Military
+   299150000; Dreamland Mission Prime  ; AM                  ;       8000; Military
+   299200000; LA Center ultra high     ; AM                  ;       8000; Aviation
+   300050000; Have Quick               ; AM                  ;       8000; Military
+   300325000; Air Exercise Ops         ; AM                  ;       8000; Military
+   300550000; Slow movers air-air      ; AM                  ;       8000; Aviation
+   302300000; Desert Radio Advisory    ; AM                  ;       8000; Military
+   303000000; Aerial Refueling         ; AM                  ;       8000; Military
+   303025000; Groom Mission            ; AM                  ;       8000; Military
+   303100000; Red Flag AWACS Tasking   ; AM                  ;       8000; Military
+   303600000; Air Exercise Control     ; AM                  ;       8000; Military
+   304600000; Range 61 Ops             ; AM                  ;       8000; Military
+   304800000; USAF Hurricane Hunters   ; AM                  ;       8000; Military
+   305450000; Dreamland AAR Prime      ; AM                  ;       8000; Military
+   305500000; EC East/West controller  ; AM                  ;       8000; Military
+   305600000; SOF Bullseye Control     ; AM                  ;       8000; Military
+   305650000; 422 TES                  ; AM                  ;       8000; Military
+   306075000; Red Flag 55FS            ; AM                  ;       8000; Military
+   306500000; Red Flag MQ-9            ; AM                  ;       8000; Military
+   307250000; KLAS Departure SW        ; AM                  ;       8000; Aviation
+   308000000; Red Flag RED 9           ; AM                  ;       8000; Military
+   308125000; Red Flag 41 RQS          ; AM                  ;       8000; Military
+   308550000; Red Flag 55FS            ; AM                  ;       8000; Military
+   308600000; Red Flag AWACS Chalice   ; AM                  ;       8000; Military
+   309500000; Red Flag Blue 7          ; AM                  ;       8000; Military
+   309775000; MiGs to RTO              ; AM                  ;       8000; Military
+   309800000; Vampires air-air         ; AM                  ;       8000; Military
+   310550000; Red Flag E-3             ; AM                  ;       8000; Military
+   310700000; Dreamland Mission UHF    ; AM                  ;       8000; Military
+   311225000; Air Exercise Targeting   ; AM                  ;       8000; Military
+   313900000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   314075000; Air Exercise Weapons School; AM                  ;       8000; Military
+   314300000; Fallon/Wendover Range    ; AM                  ;       8000; Military
+   314350000; Red Flag 55FS            ; AM                  ;       8000; Military
+   314400000; 66 RQS                   ; AM                  ;       8000; Military
+   314600000; Dreamland MOA Mission    ; AM                  ;       8000; Military
+   315200000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   315800000; 422 TES                  ; AM                  ;       8000; Military
+   315850000; Air Exercise AWACS       ; AM                  ;       8000; Military
+   316200000; Red Flag Exercise        ; AM                  ;       8000; Military
+   317400000; LA Center                ; AM                  ;       8000; Aviation
+   317525000; Nellis Control East      ; AM                  ;       8000; Aviation,Military
+   317625000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   317900000; Red Flag E-3             ; AM                  ;       8000; Military
+   318000000; 422 TES                  ; AM                  ;       8000; Military
+   318400000; Red Flag AWACS           ; AM                  ;       8000; Military
+   318500000; Air Exercise AWACS       ; AM                  ;       8000; Military
+   318900000; Red Flag 66 RQS          ; AM                  ;       8000; Military
+   319100000; Oakland Center           ; AM                  ;       8000; Aviation
+   319200000; LA Center                ; AM                  ;       8000; Aviation
+   319300000; Fighter Weapons School   ; AM                  ;       8000; Military
+   319500000; Aerial Refueling         ; AM                  ;       8000; Military
+   319700000; Range 65 Operations      ; AM                  ;       8000; Military
+   320000000; Nellis Command Post      ; AM                  ;       8000; Military
+   320100000; Range 62 Operations      ; AM                  ;       8000; Military
+   320800000; Red Flag AWACS link      ; AM                  ;       8000; Military
+   321100000; Nellis SFA               ; AM                  ;       8000; Aviation,Military
+   321300000; Albuquerque Center       ; AM                  ;       8000; Aviation
+   321600000; Nellis Tactical          ; AM                  ;       8000; Military
+   322250000; 433 WPS                  ; AM                  ;       8000; Military
+   322300000; Joshua Control Owens MOA ; AM                  ;       8000; Aviation,Military
+   322350000; Air Exercise Range Control; AM                  ;       8000; Military
+   322700000; TTR Hawk Ops             ; AM                  ;       8000; Military
+   322950000; Thunderbirds Solo        ; AM                  ;       8000; Military
+   323175000; Oakland Center           ; AM                  ;       8000; Aviation
+   323200000; LA Center                ; AM                  ;       8000; Aviation
+   323350000; 422 TES                  ; AM                  ;       8000; Military
+   323750000; Range 75/76 bomb drop    ; AM                  ;       8000; Military
+   323825000; Red Flag Ops             ; AM                  ;       8000; Military
+   323850000; 433 WPS Ops              ; AM                  ;       8000; Military
+   323900000; Nellis Metro Weather     ; AM                  ;       8000; Aviation,Military
+   324050000; Nellis Track             ; AM                  ;       8000; Aviation,Military
+   324400000; Nellis RTO Showtime      ; AM                  ;       8000; Military
+   324700000; AWACS Ops                ; AM                  ;       8000; Military
+   324850000; 422 TES                  ; AM                  ;       8000; Military
+   325500000; USAF AWACS Chalice       ; AM                  ;       8000; Military
+   326125000; 422/31 TES F-35A         ; AM                  ;       8000; Military
+   326200000; Nellis SFA               ; AM                  ;       8000; Aviation,Military
+   326400000; Red Flag AWACS           ; AM                  ;       8000; Military
+   326525000; VX-9 exercise            ; AM                  ;       8000; Military
+   326775000; 17 WPS                   ; AM                  ;       8000; Military
+   326800000; Keno Airfield UNICOM     ; AM                  ;       8000; Aviation
+   327000000; Nellis Control Tower     ; AM                  ;       8000; Aviation,Military
+   327050000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   327200000; Red Flag FAC             ; AM                  ;       8000; Military
+   327300000; Red Flag Ops             ; AM                  ;       8000; Military
+   327600000; Red Flag HVAA Primary    ; AM                  ;       8000; Military
+   327775000; Red Flag EC-130H EW      ; AM                  ;       8000; Military
+   328300000; Air Exercise Control     ; AM                  ;       8000; Military
+   328425000; Dreamland Mission        ; AM                  ;       8000; Military
+   328500000; Nellis Adversary Ops     ; AM                  ;       8000; Military
+   328550000; Red Flag EC-130H         ; AM                  ;       8000; Military
+   332725000; Data                     ; AM                  ;       8000; Utility
+   334225000; Data                     ; AM                  ;       8000; Utility
+   335450000; Range 71 Operations      ; AM                  ;       8000; Military
+   335500000; TTR Ground Control       ; AM                  ;       8000; Military
+   335600000; Joshua Control Isabella  ; AM                  ;       8000; Aviation,Military
+   335900000; Red Flag air-air         ; AM                  ;       8000; Military
+   336100000; Aerial Refueling         ; AM                  ;       8000; Military
+   336575000; Air Exercise Ops         ; AM                  ;       8000; Military
+   337000000; Range 64 operations      ; AM                  ;       8000; Military
+   337500000; Dreamland AAR Prime      ; AM                  ;       8000; Military
+   338350000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   338400000; Red Flag AWACS Goliath   ; AM                  ;       8000; Military
+   340200000; Nellis Command Post      ; AM                  ;       8000; Military
+   340600000; Air drops                ; AM                  ;       8000; Military
+   340900000; Air Exercise Ops         ; AM                  ;       8000; Military
+   341200000; USSTRATCOM Air-Air       ; AM                  ;       8000; Military
+   341450000; Dreamland Mission Prime  ; AM                  ;       8000; Military
+   341925000; Range 61 Operations      ; AM                  ;       8000; Military
+   342100000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   342200000; 422 TES Support          ; AM                  ;       8000; Military
+   342450000; Red Flag SAM 1           ; AM                  ;       8000; Military
+   342600000; Air Exercise Tactical    ; AM                  ;       8000; Military
+   342900000; AMC secondary            ; AM                  ;       8000; Military
+   343000000; Reveille/Desert MOA      ; AM                  ;       8000; Military
+   343200000; Air Exercise Ops         ; AM                  ;       8000; Military
+   343300000; Red Flag AWACS Darkstar  ; AM                  ;       8000; Military
+   343525000; Range 65A strike         ; AM                  ;       8000; Military
+   343600000; LA Center                ; AM                  ;       8000; Aviation
+   343725000; Nellis SFA Alpha         ; AM                  ;       8000; Aviation,Military
+   344600000; Nellis Metro Weather     ; AM                  ;       8000; Aviation,Military
+   344700000; Aerial Refueling         ; AM                  ;       8000; Military
+   344800000; Range 71/EC West Ops     ; AM                  ;       8000; Military
+   345400000; Voice                    ; AM                  ;       8000; Military
+   346100000; Nellis Ops               ; AM                  ;       8000; Aviation,Military
+   346300000; LA Center                ; AM                  ;       8000; Aviation
+   346450000; China Lake Ops           ; AM                  ;       8000; Military
+   347400000; USAF AWACS Bandsaw       ; AM                  ;       8000; Military
+   348700000; Joshua Control Primary   ; AM                  ;       8000; Aviation,Military
+   348725000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   349100000; Nellis 16 WPS Support    ; AM                  ;       8000; Military
+   349175000; Exercise enroute air-air ; AM                  ;       8000; Military
+   349200000; Red Flag AWACS BLUE 11   ; AM                  ;       8000; Military
+   349400000; USAF Control Towers      ; AM                  ;       8000; Aviation
+   349500000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   349600000; Red Flag AWACS Strike    ; AM                  ;       8000; Military
+   349700000; Dreamland Mission        ; AM                  ;       8000; Military
+   349875000; Weapons School Instructor; AM                  ;       8000; Military
+   349975000; Red Flag HVAA Secondary  ; AM                  ;       8000; Military
+   351900000; LA Center                ; AM                  ;       8000; Aviation
+   352000000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   352050000; LA Center                ; AM                  ;       8000; Aviation
+   352600000; Aerial Refueling         ; AM                  ;       8000; Military
+   353700000; KLAS Departure NE        ; AM                  ;       8000; Aviation
+   353800000; Oakland Center           ; AM                  ;       8000; Aviation
+   354300000; Range 76 Operations      ; AM                  ;       8000; Military
+   355100000; 26 WPS Support           ; AM                  ;       8000; Military
+   357000000; Air Exercise R-2508      ; AM                  ;       8000; Military
+   357100000; Northern Ranges MOA      ; AM                  ;       8000; Military
+   357500000; Dreamland Mission Backup ; AM                  ;       8000; Military
+   360200000; USN Control Towers       ; AM                  ;       8000; Aviation
+   360250000; Nellis 16 WPS Support    ; AM                  ;       8000; Military
+   360625000; Creech AFB Tower         ; AM                  ;       8000; Aviation,Military
+   360650000; LA Center                ; AM                  ;       8000; Aviation
+   360750000; North Las Vegas Tower    ; AM                  ;       8000; Aviation
+   361500000; 414th CTS Cobra Ops      ; AM                  ;       8000; Military
+   361600000; Range 63 Operations      ; AM                  ;       8000; Military
+   363000000; Joshua Control Palmdale  ; AM                  ;       8000; Aviation,Military
+   363400000; Air Exercise             ; AM                  ;       8000; Military
+   363500000; Clover Control South     ; AM                  ;       8000; Aviation,Military
+   363900000; Range 75 Operations      ; AM                  ;       8000; Military
+   364000000; Caliente MOA             ; AM                  ;       8000; Military
+   364800000; Salt Lake Center Tactical; AM                  ;       8000; Aviation
+   366150000; Green Flag               ; AM                  ;       8000; Military
+   369000000; Have Quick TOD           ; AM                  ;       8000; Military
+   369150000; Range 75/76 bomb drop    ; AM                  ;       8000; Military
+   369400000; 422 TES                  ; AM                  ;       8000; Military
+   370825000; Coyote MOA Secondary     ; AM                  ;       8000; Military
+   370850000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   371050000; 422 TES                  ; AM                  ;       8000; Military
+   371200000; Dreamland Mission        ; AM                  ;       8000; Military
+   371500000; RPA Common               ; AM                  ;       8000; Military
+   371600000; ECE/ECW/ECS              ; AM                  ;       8000; Military
+   371675000; Exercise controller      ; AM                  ;       8000; Military
+   372150000; Red Flag BEIGE 30        ; AM                  ;       8000; Military
+   372200000; Nellis/Creech Base Ops   ; AM                  ;       8000; Aviation,Military
+   373400000; Air Exercise Air-Air     ; AM                  ;       8000; Military
+   373550000; 422 TES                  ; AM                  ;       8000; Military
+   375200000; PMSV Metro Weather       ; AM                  ;       8000; Aviation
+   375700000; USSTRATCOM AAR Anchor    ; AM                  ;       8000; Military
+   375800000; Dreamland Mission Prime  ; AM                  ;       8000; Military
+   376075000; VX-9 Vampires            ; AM                  ;       8000; Military
+   376100000; Range 71-76 Ops          ; AM                  ;       8000; Military
+   376150000; Nellis 16 WPS Support    ; AM                  ;       8000; Military
+   376200000; Air Combat Command       ; AM                  ;       8000; Military
+   376500000; Red Flag AWACS Ops       ; AM                  ;       8000; Military
+   377100000; LA Center                ; AM                  ;       8000; Aviation
+   377175000; Nellis SFA               ; AM                  ;       8000; Aviation,Military
+   377250000; Dreamland Mission Backup ; AM                  ;       8000; Military
+   377400000; Air Exercise air-air     ; AM                  ;       8000; Military
+   377575000; Air Exercise AWACS       ; AM                  ;       8000; Military
+   377700000; 414th CTS Tactical       ; AM                  ;       8000; Military
+   377800000; Nellis Range Controller  ; AM                  ;       8000; Military
+   377850000; Dreamland Ops            ; AM                  ;       8000; Military
+   377975000; Air Exercise air-air     ; AM                  ;       8000; Military
+   378225000; Red Flag E-8C            ; AM                  ;       8000; Military
+   378350000; Air Exercise air-air     ; AM                  ;       8000; Military
+   378675000; Red Flag RQ-170          ; AM                  ;       8000; Military
+   379000000; 422 Ops Desk             ; AM                  ;       8000; Military
+   379100000; Coyote MOA Exercise      ; AM                  ;       8000; Military
+   379150000; KLAS Approach West       ; AM                  ;       8000; Aviation
+   379275000; Salt Lake Center         ; AM                  ;       8000; Aviation
+   379400000; Superior Valley Range    ; AM                  ;       8000; Military
+   379500000; Coyote Range Control     ; AM                  ;       8000; Military
+   379550000; Red Flag DCA             ; AM                  ;       8000; Military
+   379600000; 422 TES Ops              ; AM                  ;       8000; Military
+   379650000; Range 77 Secondary       ; AM                  ;       8000; Military
+   381300000; Nellis Command Post      ; AM                  ;       8000; Military
+   381900000; China Lake Range Control ; AM                  ;       8000; Military
+   384800000; Dreamland Mission        ; AM                  ;       8000; Military
+   385400000; Nellis Approach West     ; AM                  ;       8000; Aviation,Military
+   385500000; Nellis SFA               ; AM                  ;       8000; Aviation,Military
+   392150000; Nellis-TAC C2 Coordination; AM                  ;       8000; Military
+   397200000; Nellis SFA               ; AM                  ;       8000; Aviation,Military
+   412875000; NTTR Base Ops            ; FM                  ;      12500; Government,Military
+   432100000; 70cm SSB Calling         ; USB                 ;       3000; AmateurRadio
+   433920000; Dakota Alert Sensor      ; FSK                 ;      12500; Security
+   446000000; 70cm FM Simplex          ; FM                  ;      10000; AmateurRadio
+   451800000; Mining Operations        ; FM                  ;      12500; Business
+   456800000; Mining Operations Input  ; FM                  ;      12500; Business
+   462550000; GMRS_FRS15               ; Narrow FM           ;       5000; GMRS_FRS
+   462562500; GMRS_FRS01               ; Narrow FM           ;       5000; GMRS_FRS
+   462575000; GMRS_FRS16               ; Narrow FM           ;       5000; GMRS_FRS
+   462587500; GMRS_FRS02               ; Narrow FM           ;       5000; GMRS_FRS
+   462600000; GMRS_FRS17               ; Narrow FM           ;       5000; GMRS_FRS
+   462612500; GMRS_FRS03               ; Narrow FM           ;       5000; GMRS_FRS
+   462625000; GMRS_FRS18               ; Narrow FM           ;       5000; GMRS_FRS
+   462637500; GMRS_FRS04               ; Narrow FM           ;       5000; GMRS_FRS
+   462650000; GMRS_FRS19               ; Narrow FM           ;       5000; GMRS_FRS
+   462662500; GMRS_FRS05               ; Narrow FM           ;       5000; GMRS_FRS
+   462675000; GMRS_FRS20               ; Narrow FM           ;       5000; GMRS_FRS
+   462687500; GMRS_FRS06               ; Narrow FM           ;       5000; GMRS_FRS
+   462700000; GMRS_FRS21               ; Narrow FM           ;       5000; GMRS_FRS
+   462712500; GMRS_FRS07               ; Narrow FM           ;       5000; GMRS_FRS
+   462725000; GMRS_FRS22               ; Narrow FM           ;       5000; GMRS_FRS
+   467562500; GMRS_FRS08               ; Narrow FM           ;       5000; GMRS_FRS
+   467587500; GMRS_FRS09               ; Narrow FM           ;       5000; GMRS_FRS
+   467612500; GMRS_FRS10               ; Narrow FM           ;       5000; GMRS_FRS
+   467637500; GMRS_FRS11               ; Narrow FM           ;       5000; GMRS_FRS
+   467662500; GMRS_FRS12               ; Narrow FM           ;       5000; GMRS_FRS
+   467687500; GMRS_FRS13               ; Narrow FM           ;       5000; GMRS_FRS
+   467712500; GMRS_FRS14               ; Narrow FM           ;       5000; GMRS_FRS
+   906500000; 33cm SSB Calling         ; USB                 ;       3000; AmateurRadio
+  1294500000; 23cm SSB Calling         ; USB                 ;       3000; AmateurRadio
+  1375000000; NTTR CRIIS Downlink      ; Digital             ;     500000; Military,TestRange
+  1819000000; NTTR ACTS Downlink Blue  ; Digital             ;    1000000; Military,TestRange
+  1845000000; NTTR ACTS Downlink Red   ; Digital             ;    1000000; Military,TestRange
