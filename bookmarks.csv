@@ -1,13 +1,17 @@
 # Tag name          ;  color
 CB                  ; #ff0000
-AmateurRadio        ; #00ff00
+AmateurRadio        ; #fffb00
 Untagged            ; #c0c0c0
-FamilyRadio         ; #0000ff
+GMRS_FRS            ; #0000ff
 MURS                ; #ffff00
 AMRadio             ; #ff00ff
 PublicService       ; #000000
+FMRadio             ; #ffb700
+NOAA		        ; #60aaff
+Marine              ; #00fff2
 
 # Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
+    24930000; 12m SSB Calling          ; USB                 ;       3000; AmateurRadio
     26965000; CB01                     ; AM                  ;      10000; CB
     26975000; CB02                     ; AM                  ;      10000; CB
     26985000; CB03                     ; AM                  ;      10000; CB
@@ -30,9 +34,9 @@ PublicService       ; #000000
     27205000; CB20                     ; AM                  ;      10000; CB
     27215000; CB21                     ; AM                  ;      10000; CB
     27225000; CB22                     ; AM                  ;      10000; CB
-    27255000; CB23                     ; AM                  ;      10000; CB
     27235000; CB24                     ; AM                  ;      10000; CB
     27245000; CB25                     ; AM                  ;      10000; CB
+    27255000; CB23                     ; AM                  ;      10000; CB
     27265000; CB26                     ; AM                  ;      10000; CB
     27275000; CB27                     ; AM                  ;      10000; CB
     27285000; CB28                     ; AM                  ;      10000; CB
@@ -48,6 +52,10 @@ PublicService       ; #000000
     27385000; CB38                     ; AM                  ;      10000; CB
     27395000; CB39                     ; AM                  ;      10000; CB
     27405000; CB40                     ; AM                  ;      10000; CB
+    28300000; 10m SSB Calling          ; USB                 ;       3000; AmateurRadio
+    29600000; 10m FM Simplex           ; FM                  ;      10000; AmateurRadio
+    50125000; 6m CW Calling            ; CW                  ;        500; AmateurRadio
+    52525000; 6m FM Simplex            ; FM                  ;      10000; AmateurRadio
     87900000; 87.9 FM                  ; WFM (stereo)        ;     200000; FMRadio
     88100000; 88.1 FM                  ; WFM (stereo)        ;     200000; FMRadio
     88300000; 88.3 FM                  ; WFM (stereo)        ;     200000; FMRadio
@@ -148,33 +156,107 @@ PublicService       ; #000000
    107300000; 107.3 FM                 ; WFM (stereo)        ;     200000; FMRadio
    107500000; 107.5 FM                 ; WFM (stereo)        ;     200000; FMRadio
    107700000; 107.7 FM                 ; WFM (stereo)        ;     200000; FMRadio
-   145290000; Amateur Radio Repeator   ; Narrow FM           ;      10000; AmateurRadio
-   145330000; Chat                     ; Narrow FM           ;      10000; AmateurRadio
-   162400000; SF Weather KHB49         ; WFM (mono)          ;      30000; PublicService
-   462562500; FRS01                    ; Narrow FM           ;       5000; FamilyRadio
-   462587500; FRS02                    ; Narrow FM           ;       5000; FamilyRadio
-   462612500; FRS03                    ; Narrow FM           ;       5000; FamilyRadio
-   462637500; FRS04                    ; Narrow FM           ;       5000; FamilyRadio
-   462662500; FRS05                    ; Narrow FM           ;       5000; FamilyRadio
-   462687500; FRS06                    ; Narrow FM           ;       5000; FamilyRadio
-   462712500; FRS07                    ; Narrow FM           ;       5000; FamilyRadio
-   467562500; FRS08                    ; Narrow FM           ;       5000; FamilyRadio
-   467587500; FRS09                    ; Narrow FM           ;       5000; FamilyRadio
-   467612500; FRS10                    ; Narrow FM           ;       5000; FamilyRadio
-   467637500; FRS11                    ; Narrow FM           ;       5000; FamilyRadio
-   467662500; FRS12                    ; Narrow FM           ;       5000; FamilyRadio
-   467687500; FRS13                    ; Narrow FM           ;       5000; FamilyRadio
-   467712500; FRS14                    ; Narrow FM           ;       5000; FamilyRadio
-   462550000; FRS15                    ; Narrow FM           ;       5000; FamilyRadio
-   462575000; FRS16                    ; Narrow FM           ;       5000; FamilyRadio
-   462600000; FRS17                    ; Narrow FM           ;       5000; FamilyRadio
-   462625000; FRS18                    ; Narrow FM           ;       5000; FamilyRadio
-   462650000; FRS19                    ; Narrow FM           ;       5000; FamilyRadio
-   462675000; FRS20                    ; Narrow FM           ;       5000; FamilyRadio
-   462700000; FRS21                    ; Narrow FM           ;       5000; FamilyRadio
-   462725000; FRS22                    ; Narrow FM           ;       5000; FamilyRadio
+   156000000; Channel 00 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156050000; Channel 01 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156100000; Channel 02 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156150000; Channel 03 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156200000; Channel 04 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156250000; Channel 05 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156300000; Channel 06 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156350000; Channel 07 (Commercial)  ; Narrow FM           ;      12500; Marine
+   156400000; Channel 08 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156450000; Channel 09 (Boater Call) ; Narrow FM           ;      12500; Marine
+   156500000; Channel 10 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   156550000; Channel 11 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156600000; Channel 12 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156650000; Channel 13 (Nav Safety)  ; Narrow FM           ;      12500; Marine
+   156700000; Channel 14 (Port Ops)    ; Narrow FM           ;      12500; Marine
+   156750000; Channel 15 (On-board)    ; Narrow FM           ;      12500; Marine
+   156800000; Channel 16 (Distress)    ; Narrow FM           ;      12500; Marine
+   156850000; Channel 17 (State Ctl)   ; Narrow FM           ;      12500; Marine
+   156900000; Channel 18 (Commercial)  ; Narrow FM           ;      12500; Marine
+   156950000; Channel 19 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157000000; Channel 20 (Repeater)    ; Narrow FM           ;      12500; Marine
+   157050000; Channel 21 (USCG)        ; Narrow FM           ;      12500; Marine
+   157100000; Channel 22 (USCG)        ; Narrow FM           ;      12500; Marine
+   157150000; Channel 23 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157200000; Channel 24 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157250000; Channel 25 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157300000; Channel 26 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157350000; Channel 27 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157400000; Channel 28 (Commercial)  ; Narrow FM           ;      12500; Marine
+   157450000; Channel 63 (USCG)        ; Narrow FM           ;      12500; Marine
+   157500000; Channel 65 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157550000; Channel 66 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157600000; Channel 67 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157650000; Channel 68 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157700000; Channel 69 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157750000; Channel 70 (DSC)         ; Digital             ;      12500; Marine
+   157800000; Channel 71 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157850000; Channel 72 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157900000; Channel 73 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   157950000; Channel 74 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158000000; Channel 75 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158050000; Channel 76 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158100000; Channel 77 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158150000; Channel 78 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158200000; Channel 79 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158250000; Channel 80 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158300000; Channel 81 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158350000; Channel 82 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158400000; Channel 83 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158450000; Channel 84 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158500000; Channel 85 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158550000; Channel 86 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158600000; Channel 87 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   158650000; Channel 88 (Ship-Ship)   ; Narrow FM           ;      12500; Marine
+   144200000; 2m SSB Calling           ; USB                 ;       3000; AmateurRadio
+   146520000; 2m FM Simplex            ; FM                  ;      10000; AmateurRadio
    151820000; MURS 151.820 MHz         ; WFM (mono)          ;      11250; MURS
    151880000; MURS 151.880 MHz         ; WFM (mono)          ;      11250; MURS
    151940000; MURS 151.940 MHz         ; WFM (mono)          ;      11250; MURS
    154570000; MURS 154.570 MHz         ; WFM (mono)          ;      20000; MURS
    154600000; MURS 154.600 MHz         ; WFM (mono)          ;      20000; MURS
+   222100000; 1.25m SSB Calling        ; USB                 ;       3000; AmateurRadio
+   223500000; 1.25m FM Simplex         ; FM                  ;      10000; AmateurRadio
+   432100000; 70cm SSB Calling         ; USB                 ;       3000; AmateurRadio
+   446000000; 70cm FM Simplex          ; FM                  ;      10000; AmateurRadio
+   462550000; GMRS_FRS15               ; Narrow FM           ;       5000; GMRS_FRS
+   462562500; GMRS_FRS01               ; Narrow FM           ;       5000; GMRS_FRS
+   462575000; GMRS_FRS16               ; Narrow FM           ;       5000; GMRS_FRS
+   462587500; GMRS_FRS02               ; Narrow FM           ;       5000; GMRS_FRS
+   462600000; GMRS_FRS17               ; Narrow FM           ;       5000; GMRS_FRS
+   462612500; GMRS_FRS03               ; Narrow FM           ;       5000; GMRS_FRS
+   462625000; GMRS_FRS18               ; Narrow FM           ;       5000; GMRS_FRS
+   462637500; GMRS_FRS04               ; Narrow FM           ;       5000; GMRS_FRS
+   462650000; GMRS_FRS19               ; Narrow FM           ;       5000; GMRS_FRS
+   462662500; GMRS_FRS05               ; Narrow FM           ;       5000; GMRS_FRS
+   462675000; GMRS_FRS20               ; Narrow FM           ;       5000; GMRS_FRS
+   462687500; GMRS_FRS06               ; Narrow FM           ;       5000; GMRS_FRS
+   462700000; GMRS_FRS21               ; Narrow FM           ;       5000; GMRS_FRS
+   462712500; GMRS_FRS07               ; Narrow FM           ;       5000; GMRS_FRS
+   462725000; GMRS_FRS22               ; Narrow FM           ;       5000; GMRS_FRS
+   467562500; GMRS_FRS08               ; Narrow FM           ;       5000; GMRS_FRS
+   467587500; GMRS_FRS09               ; Narrow FM           ;       5000; GMRS_FRS
+   467612500; GMRS_FRS10               ; Narrow FM           ;       5000; GMRS_FRS
+   467637500; GMRS_FRS11               ; Narrow FM           ;       5000; GMRS_FRS
+   467662500; GMRS_FRS12               ; Narrow FM           ;       5000; GMRS_FRS
+   467687500; GMRS_FRS13               ; Narrow FM           ;       5000; GMRS_FRS
+   467712500; GMRS_FRS14               ; Narrow FM           ;       5000; GMRS_FRS
+   906500000; 33cm SSB Calling         ; USB                 ;       3000; AmateurRadio
+  1294500000; 23cm SSB Calling         ; USB                 ;       3000; AmateurRadio
+   162400000; NOAA Weather 1 		   ; WFM (mono)          ;      30000; NOAA
+   162425000; NOAA Weather 2 		   ; WFM (mono)          ;      30000; NOAA
+   162450000; NOAA Weather 3 		   ; WFM (mono)          ;      30000; NOAA
+   162475000; NOAA Weather 4 		   ; WFM (mono)          ;      30000; NOAA
+   162500000; NOAA Weather 5 		   ; WFM (mono)          ;      30000; NOAA
+   162525000; NOAA Weather 6 		   ; WFM (mono)          ;      30000; NOAA
+   162550000; NOAA Weather 7 		   ; WFM (mono)          ;      30000; NOAA
+   155370000; National Law Tac 1       ; Narrow FM           ;      12500; PublicSafety
+   155475000; National Law Tac 2       ; Narrow FM           ;      12500; PublicSafety
+   154280000; National Fire Tac        ; Narrow FM           ;      12500; PublicSafety
+   154265000; National EMS Tac         ; Narrow FM           ;      12500; PublicSafety
+   151137500; National Interop 1       ; Narrow FM           ;      12500; PublicSafety
+   154452500; National Interop 2       ; Narrow FM           ;      12500; PublicSafety
+   158737500; National Interop 3       ; Narrow FM           ;      12500; PublicSafety
+   159472500; National Interop 4       ; Narrow FM           ;      12500; PublicSafety
