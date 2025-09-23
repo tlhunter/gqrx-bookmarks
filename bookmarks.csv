@@ -12,6 +12,7 @@ Military            ; #c0c0c0
 NOAA                ; #60aaff
 Navigation          ; #c0c0c0
 PublicSafety        ; #ff4500
+PMR446              ; #fffb00
 Security            ; #c0c0c0
 TestRange           ; #c0c0c0
 Utility             ; #c0c0c0
@@ -1034,6 +1035,14 @@ Utility             ; #c0c0c0
    432100000; 70cm SSB Calling         ; USB                 ;       3000; AmateurRadio
    433920000; Dakota Alert Sensor      ; FSK                 ;      12500; Security
    446000000; 70cm FM Simplex          ; FM                  ;      10000; AmateurRadio
+   446006250; PMR446_1                 ; Narrow FM           ;      12500; PMR446
+   446018750; PMR446_2                 ; Narrow FM           ;      12500; PMR446
+   446031250; PMR446_3                 ; Narrow FM           ;      12500; PMR446
+   446043750; PMR446_4                 ; Narrow FM           ;      12500; PMR446
+   446056250; PMR446_5                 ; Narrow FM           ;      12500; PMR446
+   446068750; PMR446_6                 ; Narrow FM           ;      12500; PMR446
+   446081250; PMR446_7                 ; Narrow FM           ;      12500; PMR446
+   446093750; PMR446_8                 ; Narrow FM           ;      12500; PMR446
    451800000; Mining Operations        ; FM                  ;      12500; Business
    456800000; Mining Operations Input  ; FM                  ;      12500; Business
    462550000; GMRS_FRS15               ; Narrow FM           ;       5000; GMRS_FRS
